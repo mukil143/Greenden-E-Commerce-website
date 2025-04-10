@@ -6,8 +6,7 @@
 
 ## 🌱 Live Demo
 
-🔗 [View GREENDEN Website](https://mukil143.github.io/Greenden-E-Commerce-website/index.html)  
-*(Replace with your actual hosted project link)*
+🔗 [View GREENDEN Website](https://mukil143.github.io/Greenden-E-Commerce-website/index.html)
 
 ---
 
