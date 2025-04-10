@@ -6,14 +6,14 @@
 
 ## 🌱 Live Demo
 
-🔗 [View GREENDEN Website](https://your-live-link.com)  
+🔗 [View GREENDEN Website](https://mukil143.github.io/Greenden-E-Commerce-website/index.html)  
 *(Replace with your actual hosted project link)*
 
 ---
 
 ## 🖼️ Project Preview
 
-![GREENDEN Homepage Screenshot](./screenshots/homepage.png)  
+![GREENDEN Homepage Screenshot](./Homepage-Screenshot.png)  
 *Elegant and modern plant store interface*
 
 ---
