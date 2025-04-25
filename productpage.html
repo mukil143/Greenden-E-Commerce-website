@@ -7,6 +7,7 @@
     <title>Greenden</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="icon" href="images/1.png">
+    <script defer src="product.js"></script>
 </head>
 
 <body class="m-0 p-0">
@@ -14,7 +15,7 @@
     <nav class="flex bg-green-100 justify-between items-center py-4 px-5  shadow-xl sticky top-0 z-40">
         <h1 class="font-semibold text-4xl">GREENDEN</h1>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="size-6 w-7 md:hidden">
+            class="size-6 w-7 md:hidden" id="sidenav-btn">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
 
@@ -31,6 +32,33 @@
         </ul>
     </nav>
 
+
+    <!-- sidenavbar section -->
+    <section id="sidenavbar"
+        class="bg-green-100 fixed z-50 flex  flex-col right-0 top-0 transform translate-x-96 duration-1000  md:hidden"
+        style="height: 100vh; width: 50%;  ">
+
+        <div class="flex items-end p-4 justify-start mt-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6 w-6  cursor-pointer " id="close-nav">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+
+        </div>
+
+        <ul class=" flex flex-col gap-5  text-gray-600  text-xl m-auto mt-0 ">
+            <li class="hover:underline hover:text-black">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="hover:underline  hover:text-black">
+                <a href="productpage.html">Products</a>
+            </li>
+            <li class="hover:underline  hover:text-black">
+                <a href="contactform.html">Contact Us</a>
+            </li>
+        </ul>
+    </section>
+
     <!-- Product section -->
     <section class="flex flex-col gap-6 p-4 text-center mt-5">
         <h1 class="text-3xl font-bold">Our Products</h1>
@@ -41,62 +69,94 @@
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                 </svg>
-                <input type="text" placeholder="Search for a product....." class="outline-none  p-2" style="width: 100%;" >
+                <input type="text"  id="search-input" placeholder="Search for a product....." class="outline-none  p-2"
+                    style="width: 100%;">
             </div>
         </div>
-       
-        
-            <div class="grid grid-cols-2 gap-4 mt-4 md:grid-cols-4  ">
-                <div class="">
-                    <img src="./images/best__seller1.png" alt=""
-                        class="inline ">
-                    <h1>Rose Plant</h1>
-                    <p>₹20</p>
-                </div>
-                <div>
-                    <img src="./images/best__seller2.png" alt=""
-                        class="inline ">
-                    <h1>Sanke Plant</h1>
-                    <p>₹20</p>
-                </div>
-                <div>
-                    <img src="./images/best__seller3.png" alt=""
-                        class="inline ">
-                    <h1>Alovera Plant</h1>
-                    <p>₹20</p>
-                </div>
-                <div>
-                    <img src="./images/best__seller4.png" alt=""
-                        class="inline ">
-                    <h1>Neem Plant</h1>
-                    <p>₹20</p>
-                </div>
-                <!-- 2nd row -->
-                <div class="">
-                    <img src="./images/best__seller1.png" alt=""
-                        class="inline ">
-                    <h1>Rose Plant</h1>
-                    <p>₹20</p>
-                </div>
-                <div>
-                    <img src="./images/best__seller2.png" alt=""
-                        class="inline ">
-                    <h1>Sanke Plant</h1>
-                    <p>₹20</p>
-                </div>
-                <div>
-                    <img src="./images/best__seller3.png" alt=""
-                        class="inline ">
-                    <h1>Alovera Plant</h1>
-                    <p>₹20</p>
-                </div>
-                <div>
-                    <img src="./images/best__seller4.png" alt=""
-                        class="inline ">
-                    <h1>Neem Plant</h1>
-                    <p>₹20</p>
+
+
+        <div id="product-container" class="grid grid-cols-2 gap-4 mt-4 md:grid-cols-4">
+            <div class="" id="product-item">
+                <img src="./images/best__seller1.png" alt="" class="inline  transform hover:-translate-y-2 transition duration-200 hover:shadow-xl">
+                <h1>Rose Plant</h1>
+                <p>₹399</p>
+                <div class="flex  flex-col items-center  justify-center gap-1  text-xs  md:flex-row mx-2">
+                    <button class="bg-yellow-400  p-2 px-6 text-nowrap  border rounded md:px-1 ">Add to Cart</button>
+                    <button class="p-2 px-8 bg-black text-white rounded md:px-1">Buy Now</button>
                 </div>
             </div>
+            <div>
+                <img src="./images/best__seller2.png" alt="" class="inline transform hover:-translate-y-2 transition duration-200 hover:shadow-xl ">
+                <h1>Snake Plant</h1>
+                <p>₹299</p>
+                <div class="flex  flex-col items-center  justify-center gap-1  text-xs  md:flex-row mx-2">
+                    <button class="bg-yellow-400  p-2 px-6 text-nowrap  border rounded md:px-1 ">Add to Cart</button>
+                    <button class="p-2 px-8 bg-black text-white rounded md:px-1">Buy Now</button>
+                </div>
+            </div>
+            <div>
+                <img src="./images/best__seller3.png" alt="" class="inline transform hover:-translate-y-2 transition duration-200 hover:shadow-xl">
+                <h1>Alovera Plant</h1>
+                <p>₹199</p>
+                <div class="flex  flex-col items-center  justify-center gap-1  text-xs  md:flex-row mx-2">
+                    <button class="bg-yellow-400  p-2 px-6 text-nowrap  border rounded md:px-1 ">Add to Cart</button>
+                    <button class="p-2 px-8 bg-black text-white rounded md:px-1">Buy Now</button>
+                </div>
+            </div>
+            <div>
+                <img src="./images/best__seller4.png" alt="" class="inline transform hover:-translate-y-2 transition duration-200 hover:shadow-xl">
+                <h1>Neem Plant</h1>
+                <p>₹259</p>
+                <div class="flex  flex-col items-center  justify-center gap-1  text-xs  md:flex-row mx-2">
+                    <button class="bg-yellow-400  p-2 px-6 text-nowrap  border rounded md:px-1 ">Add to Cart</button>
+                    <button class="p-2 px-8 bg-black text-white rounded md:px-1">Buy Now</button>
+                </div>
+            </div>
+            <!-- 2nd row -->
+            <div class="">
+                <img src="./images/best__seller5.png" alt="" class="inline transform hover:-translate-y-2 transition duration-200 hover:shadow-xl">
+                <h1>Aglaonema Plant</h1>
+                <p>₹399</p>
+                <div class="flex  flex-col items-center  justify-center gap-1  text-xs  md:flex-row mx-2">
+                    <button class="bg-yellow-400  p-2 px-6 text-nowrap  border rounded md:px-1 ">Add to Cart</button>
+                    <button class="p-2 px-8 bg-black text-white rounded md:px-1">Buy Now</button>
+                </div>
+            </div>
+            <div>
+                <img src="./images/best__seller6.png" alt="" class="inline transform hover:-translate-y-2 transition duration-200 hover:shadow-xl ">
+                <h1>Bamboo Plant</h1>
+                <p>₹499</p>
+                <div class="flex  flex-col items-center  justify-center gap-1  text-xs  md:flex-row mx-2">
+                    <button class="bg-yellow-400  p-2 px-6 text-nowrap  border rounded md:px-1 ">Add to Cart</button>
+                    <button class="p-2 px-8 bg-black text-white rounded md:px-1">Buy Now</button>
+                </div>
+            </div>
+            <div>
+                <img src="./images/best__seller7.png" alt="" class="inline transform hover:-translate-y-2 transition duration-200 hover:shadow-xl">
+                <h1>Spider Plant</h1>
+                <p>₹399</p>
+                <div class="flex  flex-col items-center  justify-center gap-1  text-xs  md:flex-row mx-2">
+                    <button class="bg-yellow-400  p-2 px-6 text-nowrap  border rounded md:px-1 ">Add to Cart</button>
+                    <button class="p-2 px-8 bg-black text-white rounded md:px-1">Buy Now</button>
+                </div>
+            </div>
+            <div>
+                <img src="./images/best__seller8.png" alt="" class="inline transform hover:-translate-y-2 transition duration-200 hover:shadow-xl">
+                <h1>Money plant</h1>
+                <p>₹20</p>
+                <div class="flex  flex-col items-center  justify-center gap-1  text-xs  md:flex-row mx-2">
+                    <button class="bg-yellow-400  p-2 px-6 text-nowrap  border rounded md:px-1 ">Add to Cart</button>
+                    <button class="p-2 px-8 bg-black text-white rounded md:px-1">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="bg-green-100 p-8 flex flex-col gap-5">
+        <h1 class="text-3xl font-bold">Greenden</h1>
+        <p>The standard chunk of lorem ipsum used since 1500's is reproduce below for those Intrest</p>
+        <p>© 2025 Greenday.com</p>
     </section>
 
 </body>
